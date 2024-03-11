@@ -18,9 +18,9 @@ This part contains a two projects of React Native Expo apps that utilizes a WebV
 
 ## Screenshots
 
-![plus](https://i.ibb.co/BVg3bzX/plus.png)
+![plus](https://i.ibb.co/QvnbFww/plus-frameless.png)
 
-![lite](https://i.ibb.co/48svRVm/lite.png)
+![lite](https://i.ibb.co/9r6rV3R/lite-frameless.png)
 ### Dependencies
 -   `react-native`
 -   `react-native-webview`
