@@ -1,0 +1,24 @@
+<div class="acc-container pt-3">
+    <div class="acc-label">
+        <div class="pl-3 pr-4 pb-3 pt-3 acc-label-data">
+            <div style="font-size: 1.5rem; padding-top: 2px"><i class="bx bxs-user-detail bx-flip-horizontal pl-2"></i></div>
+            <div style="font-size: 1.25rem; font-weight: bold">Account</div>
+        </div>
+    </div>
+    <div class="acc-data">
+        <div class="pl-4 pr-4 pb-4 pt-2">
+            <div class="acc-user">
+                <div class="acc-name-container">
+                    <div class="acc-name-before">Welcome</div>
+                    <div class="acc-name">{{ name }}</div>
+                </div>
+            </div>
+            <div class="acc-logout-container mt-4">
+                <a href="{% url 'logout' %}" class="acc-logout" onclick="handleLogout()">
+                    <i class="bx bx-log-out pr-1"></i>
+                    LogOut
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

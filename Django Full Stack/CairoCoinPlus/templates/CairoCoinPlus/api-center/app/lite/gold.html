@@ -1,0 +1,135 @@
+{% load static %}
+
+<div class="row index">
+    <div class="card-wrapper col-lg-3">
+        <div class="card label-card">
+            <div class="label mt-2 pr-3">
+                <img src="{% static 'CairoCoinPlus/images/gold-logo.svg' %}" class="" style="padding-bottom: 7px" height="25" />
+                Gold
+            </div>
+        </div>
+        <div class="card data-card">
+            <div class="line mb-1">
+                <div class="column">
+                    <div class="price_label mr-2 mb-1">24K</div>
+                    <div class="price_label mr-2">21K</div>
+                </div>
+                <div class="column">
+                    <div class="line mb-1">
+                        <div class="price" id="gold24">
+                            <div class="block-loader pulsate m-1" style="width: 90px"></div>
+                        </div>
+                        <div class="rate" id="gold21Rate"></div>
+                    </div>
+                    <div class="line">
+                        <div class="price" id="gold21">
+                            <div class="block-loader pulsate m-1" style="width: 90px"></div>
+                        </div>
+                        <div class="rate" id="gold24Rate"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrapper col-lg-3  pb-5">
+        <div class="card label-card" style="width: 100%;">
+            <div class="label mt-2 pr-3">
+                <img src="{% static 'CairoCoinPlus/images/gold-logo.svg' %}" class="" style="padding-bottom: 3px" height="25" />
+                Gold Ingots
+            </div>
+        </div>
+        <div class="data-card" style="width: 100%;" id="gold_ingots_table">
+            <div class="line ingot-container mb-1">
+                <div class="column-ingot ">
+                    <div class="price_label  mb-2">Grams</div>
+                    <div class="price_label ingot-h-line  mb-1">5</div>
+                    <div class="price_label ingot-h-line  mb-1">10</div>
+                    <div class="price_label ingot-h-line  mb-1">Ounce</div>
+                    <div class="price_label ingot-h-line  mb-1">50</div>
+                    <div class="price_label ingot-h-line  mb-1">100</div>
+                    <div class="price_label ">Pound</div>
+                </div>
+                <div class="column-ingot">
+                    <div class="ingot-v-line"></div>
+                </div>
+                <div class="column-ingot">
+                    <div class="price_label  mb-2">
+                        <div class="price">
+                            Buy
+                        </div>
+                    </div>
+                    <div class="price_label  mb-1">
+                        <div class="price ingot-h-line" id="g5_buy">
+                            <div class="block-loader pulsate m-1" style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label  mb-1">
+                        <div class="price ingot-h-line" id="g10_buy">
+                            <div class="block-loader pulsate m-1" style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label  mb-1">
+                        <div class="price ingot-h-line" id="g31_buy">
+                            <div class="block-loader pulsate m-1 " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label  mb-1">
+                        <div class="price ingot-h-line" id="g50_buy">
+                            <div class="block-loader pulsate m-1 " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label  mb-1">
+                        <div class="price ingot-h-line" id="g100_buy">
+                            <div class="block-loader pulsate m-1 " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label ">
+                        <div class="price" id="gp_buy">
+                            <div class="block-loader pulsate m-1" style="width:  70px"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-ingot">
+                    <div class="ingot-v-line"></div>
+                </div>
+                <div class="column-ingot">
+                    <div class="price_label mb-2">
+                        <div class="price ">
+                            Sell
+                        </div>
+                    </div>
+                    <div class="price_label mb-1">
+                        <div class="price ingot-h-line" id="g5_sell">
+                            <div class="block-loader pulsate m-1  " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label mb-1">
+                        <div class="price ingot-h-line" id="g10_sell">
+                            <div class="block-loader pulsate m-1 " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label mb-1">
+                        <div class="price ingot-h-line" id="g31_sell">
+                            <div class="block-loader pulsate m-1 " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label mb-1">
+                        <div class="price ingot-h-line" id="g50_sell">
+                            <div class="block-loader pulsate m-1 " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label mb-1">
+                        <div class="price ingot-h-line" id="g100_sell">
+                            <div class="block-loader pulsate m-1 " style="width:  70px"></div>
+                        </div>
+                    </div>
+                    <div class="price_label">
+                        <div class="price" id="gp_sell">
+                            <div class="block-loader pulsate m-1" style="width:  70px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

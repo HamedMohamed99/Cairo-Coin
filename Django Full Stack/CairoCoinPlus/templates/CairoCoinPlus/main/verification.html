@@ -1,0 +1,47 @@
+{% extends "CairoCoinPlus/main/layout.html" %} {% block body %}
+{% load static %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <form class="form" id="verificationForm" action="{% url 'verification' name=name %}" method="post">
+                <h2 class="card-title text-center font-weight-light">Account verification</h2>
+                {% csrf_token %}
+                <input type="hidden" name="submission_source" id="submissionSource" value="" />
+
+                {% if message %}
+                <div class="text-center font-weight-normal" style="color: rgb(211, 52, 52)">{{ message }}</div>
+                {% endif %}
+
+                <div class="form-group mt-4 text-center" style="font-size: smaller">
+                    <label for="username">hi</label>
+                    {{ name }}, We emailed you the OTP to {{email}} <br />
+                    Enter the code blew to confirm your email address
+                </div>
+
+                <div class="form-group d-flex justify-content-center">
+                    {% for i in '123456' %}
+                    <input class="mr-1 text-center inputFormOTP digit-input" id="token{{ i }}" name="token{{ i }}" maxlength="1" oninput="restrictToNumeric(this); moveToNextInput(this);" onpaste="handlePaste(event);" />
+                    {% endfor %}
+                </div>
+                <button class="button-submit" type="submit" onclick="setSubmissionSource('button')">Verify</button>
+
+                <div class="text-center" style="background-color: white">
+                    {% if time_wait != 0 %}
+                    <div id="countdown">Wait {{ time_wait }} to send new code</div>
+                    {% endif %}
+                    <a id="resendText">Didn't receive a code? </a><a href="#" id="resendLink" onclick="setSubmissionSource('link')">RESEND</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Pass data to the JavaScript file -->
+<script>
+    var timeWait = {{ time_wait }};
+    var countdownActive = {% if time_wait != 0 %}true{% else %}false{% endif %};
+</script>
+<script src="{% static 'CairoCoinPlus/js/main/verification.js' %}"></script>
+
+{% endblock %}

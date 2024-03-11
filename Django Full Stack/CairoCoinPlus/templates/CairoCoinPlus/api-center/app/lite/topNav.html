@@ -1,0 +1,34 @@
+{% load static %}
+<!-- Modal -->
+<div class="modal" id="indicatorModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeIndicatorDescription()">&times;</span>
+        <div class="indicator-description" id="indicatorDescription"></div>
+    </div>
+</div>
+<header class="header" id="header">
+    <div class="bar-wrapper" id="bar">
+        <section class="bars-container" id="bars-container"></section>
+    </div>
+    <div class="header_img"><img src="{% static 'CairoCoinPlus/images/logoDark.svg' %}" alt="Logo" /></div>
+    <div id="header_data" class="header-data-wrapper" style="display: block">
+        <div class="header_data_b header_data">
+            <img src="{% static 'CairoCoinPlus/images/binance-logo.svg' %}" class="mr-1" style="padding-bottom: 2px; padding-top: 2px" height="18" />
+            <span id="binanceBuyNav"></span>
+        </div>
+
+        <div class="header_data_b header_data">
+            <img src="{% static 'CairoCoinPlus/images/blackmarket-logo.svg' %}" class="mr-1" height="18" />
+            <span id="blackMarketBuyNav"></span>
+        </div>
+
+        <div class="header_data_g header_data">
+            <img src="{% static 'CairoCoinPlus/images/gold-logo.svg' %}" class="mr-1" height="18" />
+            <span id="gold21Nav"></span>
+            <div style="padding-top: 5px; padding-left: 2px; font-size: 7.5px">21K</div>
+        </div>
+    </div>
+    <div class="header_indicator" id="indicatorElement" onclick="showIndicatorDescription()">
+        <span id="indicatorValueNav"></span>
+    </div>
+</header>

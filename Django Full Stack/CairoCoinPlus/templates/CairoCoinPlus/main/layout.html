@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CairoCoinPlus</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+        <link rel="icon" type="image/png" href="{% static 'CairoCoinPlus/images/favicon.png' %}" />
+        <link href="{% static 'CairoCoinPlus/css/main/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222222; height: 60px">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'CairoCoinPlus/images/logoNameLight.svg' %}" height="30" class="d-inline-block align-top" />
+            </a>
+            
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Docs</a>
+                    </li>
+                </ul>
+                <ul class="my-2 my-lg-0" style="padding-left: 0">
+                    {% if user.is_authenticated %}
+                    <li class="mobile2" style="list-style-type: none">
+                        <span class="navbar-text mr-2" aria-disabled="true">
+                            {% if now.hour < 12 %} Good morning, {% elif now.hour < 18 %} Good afternoon, {% else %} Good evening, {% endif %}
+                            <strong>{{ user.username }}</strong>
+                        </span>
+                        <a class="btn btn-light" href="{% url 'logout' %}">Log Out</a>
+                    </li>
+                    {% else %}
+                    <li class="mobile" style="list-style-type: none">
+                        <a class="btn btn-outline-light mr-2" href="{% url 'login' %}">Log In</a>
+                        <a class="btn btn-light" href="{% url 'register' %}">Register</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+            
+        </nav>
+        <div class="bgi">
+            <div class="container" style="padding-top: 2rem">{% block body %} {% endblock %}</div>
+        </div>
+
+        <script src="{% static 'CairoCoinPlus/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'CairoCoinPlus/js/main/main.js' %}"></script>
+       
+    </body>
+</html>

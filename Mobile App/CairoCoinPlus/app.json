@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "CairoCoinPlus",
+    "slug": "CairoCoinPlus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1f1f1f"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1f1f1f"
+      },
+      "package": "com.CairoCoinPlus"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0173836a-cfbe-4e73-9efb-73b166dfc0cc"
+      }
+    }
+  }
+}

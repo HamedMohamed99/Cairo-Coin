@@ -1,0 +1,125 @@
+{% load static %}
+<div class="row index">
+    <div class="card-wrapper col-lg-3">
+        <div class="card label-card">
+            <div class="label mt-2">
+                <img src="{% static 'CairoCoinPlus/images/bank-icon.svg' %}" height="25" />
+                Bank Rate
+            </div>
+        </div>
+        <div class="card data-card">
+            <div class="line mb-1">
+                <div class="column">
+                    <div class="price_label mr-2">Price</div>
+                </div>
+                <div class="column">
+                    <div class="line">
+                        <div class="price" id="bankPrice">
+                            <div class="block-loader pulsate" style="width: 90px"></div>
+                        </div>
+                        <div class="rate" id="bankPriceRate"></div>
+                    </div>
+                </div>
+                <div class="bar-wrapper-plus" id="bar-plus" onclick="showIndicatorPlusDescription()">
+                    <section class="bars-container-plus" id="bars-container-plus-b"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-wrapper col-lg-3">
+        <div class="card label-card">
+            <div class="label mt-2 pr-2">
+                <img src="{% static 'CairoCoinPlus/images/binance-logo.svg' %}" class="" style="padding-bottom: 4px" height="20" />
+                Binance
+            </div>
+        </div>
+        <div class="card data-card">
+            <div class="line mb-1">
+                <div class="column">
+                    <div class="price_label mr-2 mb-1">Buy</div>
+                    <div class="price_label mr-2">Sell</div>
+                </div>
+                <div class="column">
+                    <div class="line mb-1">
+                        <div class="price" id="binanceBuy">
+                            <div class="block-loader pulsate mb-2" style="width: 90px"></div>
+                        </div>
+
+                        <div class="rate" id="binanceBuyRate"></div>
+                    </div>
+                    <div class="line">
+                        <div class="price" id="binanceSell">
+                            <div class="block-loader pulsate m-1" style="width: 90px"></div>
+                        </div>
+                        <div class="rate" id="binanceSellRate"></div>
+                    </div>
+                </div>
+                <div class="bar-wrapper-plus" id="bar-plus" onclick="showIndicatorPlusDescription()">
+                    <section class="bars-container-plus" id="bars-container-plus-bi"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-wrapper col-lg-3">
+        <div class="card label-card">
+            <div class="label mt-2">
+                <img src="{% static 'CairoCoinPlus/images/blackmarket-logo.svg' %}" class="" style="padding-bottom: 3px" height="25" />
+                black Market
+            </div>
+        </div>
+        <div class="card data-card">
+            <div class="line mb-1">
+                <div class="column">
+                    <div class="price_label mr-2 mb-1">Buy</div>
+                    <div class="price_label mr-2">Sell</div>
+                </div>
+                <div class="column">
+                    <div class="line mb-1">
+                        <div class="price" id="blackMarketBuy">
+                            <div class="block-loader pulsate mb-2" style="width: 90px"></div>
+                        </div>
+                        <div class="rate" id="blackMarketBuyRate"></div>
+                    </div>
+                    <div class="line">
+                        <div class="price" id="blackMarketSell">
+                            <div class="block-loader pulsate m-1" style="width: 90px"></div>
+                        </div>
+                        <div class="rate" id="blackMarketSellRate"></div>
+                    </div>
+                </div>
+                <div class="bar-wrapper-plus" id="bar-plus" onclick="showIndicatorPlusDescription()">
+                    <section class="bars-container-plus" id="bars-container-plus-bm"></section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-wrapper col-lg-3 pb-5">
+        <div class="card label-card">
+            <div class="label mt-2">
+                <img src="{% static 'CairoCoinPlus/images/gold-logo.svg' %}" class="" style="padding-bottom: 3px" height="25" />
+                Gold Dollar
+            </div>
+        </div>
+        <div class="card data-card">
+            <div class="line mb-1">
+                <div class="column">
+                    <div class="price_label mr-2">Value</div>
+                </div>
+                <div class="column">
+                    <div class="line">
+                        <div class="price" id="goldDollar">
+                            <div class="block-loader pulsate" style="width: 90px"></div>
+                        </div>
+                        <div class="rate" id="goldDollarRate"></div>
+                        <div class="bar-wrapper-plus" id="bar-plus" onclick="showIndicatorPlusDescription()">
+                            <section class="bars-container-plus" id="bars-container-plus-g"></section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

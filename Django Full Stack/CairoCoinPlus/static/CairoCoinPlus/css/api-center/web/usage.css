@@ -1,0 +1,284 @@
+.index-usage {
+    display: flex;
+    justify-content: center;
+}
+
+.usage-label {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border-radius: 10px 10px 0 0;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+.usage-card {
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.form-select {
+    color: #fff;
+    background-color: #1f1f1fbb;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.usage-row {
+    flex-wrap: wrap;
+}
+
+.usage-key-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.usage-key-data {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 25px;
+    width: 90px;
+    overflow: hidden;
+    font-size: 0.75rem;
+    color: #1f1f1f;
+    position: absolute;
+    z-index: 30;
+}
+
+.usage-key-bar-container {
+    margin-left: 90px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.usage-key-bar {
+    height: 15px;
+    width: var(--key-bar-width);
+    border-radius: 2px;
+    background-color: var(--key-bar-color);
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 50;
+    transform-origin: left;
+    animation: view-key-bar 1s ease-in-out;
+}
+
+.usage-key-bar-fill {
+    height: 15px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #f5f5f5;
+    position: absolute;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+    z-index: 40;
+}
+
+.usage-key-container::after {
+    content: '';
+    position: absolute;
+    bottom: -13px; 
+    left: 0;
+    width: 90%;
+    height: 1px;
+    background-color: #cccccc38;
+    transform: translateX(5%);
+}
+
+@keyframes view-key-bar {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.key-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.key-icon .tooltiptext {
+    visibility: hidden;
+    font-size: 12px;
+    background-color: #fff;
+    color: #1f1f1f;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 2px;
+    padding: 2px 5px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: max-content;
+}
+
+.key-icon:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s;
+}
+.key-icon:hover {
+    transform: scaleY(1.1);
+    transition: 0.5s;
+}
+
+.usage-table-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usage-table-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usage-main-label {
+    background-color: #1f1f1f;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usage-main-data {
+    background-color: #fff;
+    color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.col-lg-12-usage,
+.col-lg-4-usage-big,
+.col-lg-6-usage-big,
+.col-lg-6-usage {
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.col-lg-12-usage,
+.col-lg-4-usage-big,
+.col-lg-6-usage-big {
+    max-width: 500px;
+}
+
+@media (min-width: 1500px) {
+    .col-lg-6-usage {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .col-lg-12-usage {
+        flex: 0 0 100%;
+        max-width: 1000px;
+    }
+
+    .col-lg-6-usage-big {
+        flex: 0 0 50%;
+        max-width: 500px;
+    }
+    .col-lg-4-usage-big {
+        flex: 0 0 35%;
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .col-lg-12-usage {
+        flex: 0 0 100%;
+        max-width: 1600px;
+    }
+    .col-lg-6-usage-big {
+        flex: 0 0 50%;
+        max-width: 800px;
+    }
+    .col-lg-4-usage-big {
+        flex: 0 0 35%;
+        max-width: 800px;
+    }
+}
+
+.usage-day-loader {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.usage-day-loader .line {
+    height: 15px;
+    width: 150px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    background: rgba(130, 130, 130, 0.2);
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
+    background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+    background-size: 800px 100px;
+    animation: wave-usage 1.5s infinite ease-out;
+}
+
+.usage-keys-loader {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.usage-keys-loader .line-keys {
+    height: 15px;
+    width: 80%;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    background: rgba(130, 130, 130, 0.2);
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
+    background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+    background-size: 800px 100px;
+    animation: wave-usage 1.5s infinite ease-out;
+}
+
+.usage-day-loader .line:last-child {
+    margin-top: 20px;
+}
+
+.usage-day-loader .circle {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    background: rgba(130, 130, 130, 0.2);
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
+    background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+    background-size: 800px 100px;
+    animation: wave-usage 1.5s infinite ease-out;
+}
+
+@keyframes wave-usage {
+    0% {
+        background-position: -300px 0;
+    }
+    100% {
+        background-position: 300px 0;
+    }
+}

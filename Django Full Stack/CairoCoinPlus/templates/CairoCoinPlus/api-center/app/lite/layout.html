@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CairoCoinPlus</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="icon" type="image/png" href="{% static 'CairoCoinPlus/images/favicon.png' %}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+        <link href="{% static 'CairoCoinPlus/css/api-center/app/lite/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="body-pd" class="bg-light">
+        <!-- Loader -->
+        <div class="loader-wrapper" id="loader">
+            <div class="center-container">
+                <div class="logo-container-loader">
+                    <img src="{% static 'CairoCoinPlus/images/logolight.svg' %}" alt="Logo" />
+                </div>
+                <section class="dots-container">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </section>
+            </div>
+        </div>
+
+        {% include "CairoCoinPlus/api-center/app/lite/topNav.html" %}
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <a href="#" id="dollar_click" class="nav_link">
+                    <span class="nav_name">Dollar</span>
+                </a>
+                <a href="#" id="gold_click" class="nav_link">
+                    <span class="nav_name">Gold</span>
+                </a>
+            </nav>
+        </div>
+        <noscript>
+            <p>Please enable JavaScript to continue.</p>
+        </noscript>
+        <div id="hide_body"></div>
+        <div id="reload" onclick="reload_part()">
+            <i class="bx bx-sync"></i>
+        </div>
+        <!--Container Main start-->
+        <div class="height-100" style="margin-bottom: 60px">
+            <div class="logo-container">
+                <img src="{% static 'CairoCoinPlus/images/logolight.svg' %}" alt="Logo" />
+                <div>
+                    <a id="currentTime"></a>
+                    <a id="time12"></a>
+                </div>
+            </div>
+            <div id="dollar" style="display: none">{% include "CairoCoinPlus/api-center/app/lite/dollar.html" %}</div>
+
+            <div id="gold" style="display: none">{% include "CairoCoinPlus/api-center/app/lite/gold.html" %}</div>
+        </div>
+
+        <script src="{% static 'CairoCoinPlus/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'CairoCoinPlus/js/api-center/app/lite/main.js' %}"></script>
+        <script src="{% static 'CairoCoinPlus/js/api-center/app/lite/topNav.js' %}"></script>
+        <script src="{% static 'CairoCoinPlus/js/api-center/app/lite/home.js' %}"></script>
+    </body>
+</html>

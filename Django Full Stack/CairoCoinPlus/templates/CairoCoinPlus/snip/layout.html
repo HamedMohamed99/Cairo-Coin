@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CairoCoinPlus</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="icon" type="image/png" href="{% static 'CairoCoinPlus/images/favicon.png' %}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+        <link href="{% static 'CairoCoinPlus/css/api-center/app/lite/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body class="bg-light" style="margin: 15px !important">
+        <!--Container Main start-->
+        <div>
+            <div class="logo-container">
+                <img src="{% static 'CairoCoinPlus/images/logolight.svg' %}" alt="Logo" style="width: 100px; height: 100px; padding: 20px" />
+            </div>
+
+            <div class="row index">
+                <div class="card-wrapper col-lg-3">
+                    <div class="card label-card" style="width: 100%;">
+                        <div class="label mt-2">App User</div>
+                    </div>
+                    <div class="card data-card" style="width: 100%;">
+                        <div class="line mb-1">
+                            <div class="column">
+                                <div class="price_label">Download the new versoin</div>
+                                <div style="font-size: 3rem; color: #1f1f1f">
+                                    <a href="https://drive.google.com/file/d/1DJrhZQfbJs9XwriFhLo3AEHzsUz4D9Js/view?usp=drivesdk" class="p-5" style="text-decoration: none; color: inherit">
+                                        <i class="bx bx-download pt-3"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-wrapper col-lg-3">
+                    <div class="card label-card" style="width: 100%;">
+                        <div class="label mt-2">Browser User</div>
+                    </div>
+                    <div class="card data-card" style="width: 100%;">
+                        <div class="line mb-1">
+                            <div class="column">
+                                <div class="price_label">Navigate to the new version</div>
+                                <div style="font-size: 3rem; color: #1f1f1f">
+                                    <a href="https://cairo-coin.azurewebsites.net/Plus/lite" class="p-5" style="text-decoration: none; color: inherit">
+                                        <i class="bx bx-right-arrow-alt pt-3"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="{% static 'CairoCoinPlus/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>
