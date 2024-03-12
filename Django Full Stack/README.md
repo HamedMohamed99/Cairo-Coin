@@ -33,6 +33,8 @@ The `CairoCoinPlus` app consists of two frontend interfaces.
 ### Interface 1: API Account Management
 
 This interface allows users to create API accounts and verify their emails by sending OTPs. Users can use these accounts to generate API keys and manage token usage.
+![web api ui](https://i.ibb.co/gF2jnV4/Group-1.png)
+![web api ui](https://i.ibb.co/0j6qhQK/Group-2.jpg)
 
 ### Interface 2: Lite Interface
 
