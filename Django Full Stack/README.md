@@ -39,6 +39,7 @@ This interface allows users to create API accounts and verify their emails by se
 ### Interface 2: Lite Interface
 
 This interface is designed for regular users to view some of the processed data in a lightweight manner.
+![web lite ui](https://i.ibb.co/NV64cSK/lite-web.png)
 
 ### Functionality
 
