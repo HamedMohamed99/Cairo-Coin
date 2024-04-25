@@ -226,7 +226,7 @@ In this phase, the following main tasks were completed:
 	-   **Account Management Interface:** A user-friendly interface was designed to allow API users to manage their accounts efficiently. This interface enables users to create and manage API keys, as well as monitor their usage and token balance.
     
 	-   **Token Consumption Tracking:** The interface provides users with visibility into their token consumption, allowing them to track their API usage and manage their token balance effectively.
- 		![web api ui](https://i.ibb.co/gF2jnV4/Group-1.png)
+ 		![web api ui](https://i.ibb.co/r7640Z1/Group-1.png)
 		![web api ui](https://i.ibb.co/0j6qhQK/Group-2.jpg)   
 
 - **Market Data Interface** [*Redirect*](https://cairo-coin.azurewebsites.net/Plus/lite) **for mobile only*
